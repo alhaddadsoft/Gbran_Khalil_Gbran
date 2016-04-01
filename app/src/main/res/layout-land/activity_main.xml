@@ -1,0 +1,114 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:weightSum="2"
+            android:layout_weight=".4" >
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:text="مشاركة البرنامج"
+                android:id="@+id/shareapp"
+                android:typeface="sans"
+                android:textSize="@dimen/abc_text_size_small_material"
+                android:layout_weight="1"
+                android:enabled="true" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:text="التواصل مع مطور البرنامج"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:textSize="@dimen/abc_text_size_small_material"
+                android:id="@+id/contatus" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.6" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="أوصى جبران أن تكتب هذه الكلمة على قبره بعد وفاته: "
+                android:id="@+id/textView9"
+                android:layout_gravity="right" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="	أنا حي مثلك، وأنا واقف الآن إلى جانبك؛ فاغمض عينيك والتفت؛ تراني أمامك.	     "
+                android:id="@+id/textView10" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:layout_marginTop="10dp"
+            style="@style/search_field_style"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_edit_text"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:weightSum="2">
+
+            <include
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                layout="@layout/twitteraccount"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".5"
+                android:layout_marginLeft="10dp" />
+
+            <GridView
+                android:scrollbars="none"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/grid_view"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:numColumns="2"
+                android:verticalSpacing="10dp"
+                android:stretchMode="columnWidth"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1.5" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+
+</LinearLayout>
